@@ -73,7 +73,21 @@ function initMap() {
           zoomControl: false,
           streetViewControl: false
         });
+        var panorama = new google.maps.StreetViewPanorama(
+          document.getElementById('mapX'), {
+            position: map.center,
+            pov: {
+              heading: 34,
+              pitch: 10
+            }
+          });
+      // map.setStreetView(panorama);
         mapX = new google.maps.Map(document.getElementById('mapX'), {
+
+          // var fenway = {lat: 42.345573, lng: -71.098326};
+        // var map = new google.maps.Map(document.getElementById('map'), {
+          // center: fenway,
+          // zoom: 14
           zoom: countries['us'].zoom,
           center: countries['us'].center,
           mapTypeId: 'satellite',
@@ -95,6 +109,8 @@ function initMap() {
         infoWindow = new google.maps.InfoWindow({
           content: document.getElementById('info-content')
         });
+        
+        
 
         // Create the autocomplete object and associate it with the UI input control.
         // Restrict the search to the default country, and to place type "cities".
@@ -107,6 +123,7 @@ function initMap() {
         places = new google.maps.places.PlacesService(map);
         places = new google.maps.places.PlacesService(mapX);
         places = new google.maps.places.PlacesService(mapX2);
+
 
         autocomplete.addListener('place_changed', onPlaceChanged);
 
@@ -124,11 +141,13 @@ function onPlaceChanged() {
           map.panTo(place.geometry.location);
           map.setZoom(15);
 
-          mapX.panTo(place.geometry.location);
-          mapX.setZoom(15);
+          // mapX.panTo(place.geometry.location);
+          mapX.setCenter(place.geometry.location);
+          mapX.setZoom(18);
 
-          mapX2.panTo(place.geometry.location);
-          mapX2.setZoom(15);
+          // mapX2.panTo(place.geometry.location);
+          mapX2.setCenter(place.geometry.location);
+          mapX2.setZoom(18);
 
 
           search();
@@ -190,10 +209,22 @@ function setAutocompleteCountry() {
           autocomplete.setComponentRestrictions({'country': []});
           map.setCenter({lat: 15, lng: 0});
           map.setZoom(2);
+
+          mapX.setCenter({lat: 15, lng: 0});
+          mapX.setZoom(4);
+
+          mapX2.setCenter({lat: 15, lng: 0});
+          mapX2.setZoom(6);
         } else {
           autocomplete.setComponentRestrictions({'country': country});
           map.setCenter(countries[country].center);
           map.setZoom(countries[country].zoom);
+
+          mapX.setCenter(countries[country].center);
+          mapX.setZoom(countries[country].zoom);
+
+          mapX2.setCenter(countries[country].center);
+          mapX2.setZoom(countries[country].zoom);
         }
         clearResults();
         clearMarkers();
@@ -203,6 +234,8 @@ function setAutocompleteCountry() {
 function dropMarker(i) {
         return function() {
           markers[i].setMap(map);
+          markers[i].setMap(mapX);
+          markers[i].setMap(mapX2);
         };
 }
 
@@ -251,6 +284,8 @@ function showInfoWindow() {
                 return;
               }
               infoWindow.open(map, marker);
+              infoWindow.open(mapX, marker);
+              infoWindow.open(mapX2, marker);
               buildIWContent(place);
             });
 }
