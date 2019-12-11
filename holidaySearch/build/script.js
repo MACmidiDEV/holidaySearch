@@ -73,15 +73,16 @@ function initMap() {
           zoomControl: false,
           streetViewControl: false
         });
+        var OmniProv_Hotel = {lat: 41.825491, lng: -71.415729};
         var panorama = new google.maps.StreetViewPanorama(
           document.getElementById('mapX'), {
-            position: map.center,
+            position: OmniProv_Hotel,
             pov: {
-              heading: 34,
-              pitch: 10
+              heading: 2,
+              pitch: -4
             }
           });
-      // map.setStreetView(panorama);
+      map.setStreetView(panorama);
         mapX = new google.maps.Map(document.getElementById('mapX'), {
 
           // var fenway = {lat: 42.345573, lng: -71.098326};
@@ -286,8 +287,53 @@ function showInfoWindow() {
               infoWindow.open(map, marker);
               infoWindow.open(mapX, marker);
               infoWindow.open(mapX2, marker);
+              console.log(marker)
+              var sv = new google.maps.StreetViewService();
+              sv.getPanorama(
+                {
+                  location: 
+                    {
+                      lat: marker.internalPostition.lat(),
+                      lng: marker.internalPostition.lng()
+                    },
+                  radius: 50
+                },
+                processSVData
+              );
+
               buildIWContent(place);
             });
+}
+
+
+function processSVData(data, status) {
+  if (status === 'OK') {
+    var marker = new google.maps.Marker({
+      position: data.location.latLng,
+      map: map,
+      title: data.location.description
+    });
+
+    panorama.setPano(data.location.pano);
+    panorama.setPov({
+      heading: 270,
+      pitch: 0
+    });
+    panorama.setVisible(true);
+
+    marker.addListener('click', function() {
+      var markerPanoID = data.location.pano;
+      // Set the Pano to use the passed panoID.
+      panorama.setPano(markerPanoID);
+      panorama.setPov({
+        heading: 270,
+        pitch: 0
+      });
+      panorama.setVisible(true);
+    });
+  } else {
+    console.error('Street View data not found for this location.');
+  }
 }
 
 
@@ -340,4 +386,8 @@ function buildIWContent(place) {
           document.getElementById('iw-website-row').style.display = 'none';
         }
 }
+
+
+
+
 

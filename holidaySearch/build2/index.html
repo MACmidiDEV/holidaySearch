@@ -18,6 +18,7 @@
     </style>
   </head>
   <body>
+    <div id="hotelSearchMap"></div>
     <div id="map" style="width: 50%; height: 50%;float:left"></div>
     <div id="pano" style="width: 50%; height: 50%;float:left"></div>
     <script>
@@ -30,19 +31,20 @@
 
       function initMap() {
         var berkeley = {lat: 37.869085, lng: -122.254775};
+        var OmniProv_Hotel = {lat: 41.825491, lng: -71.415729};
         var sv = new google.maps.StreetViewService();
 
         panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'));
 
         // Set up the map.
         map = new google.maps.Map(document.getElementById('map'), {
-          center: berkeley,
+          center: OmniProv_Hotel,
           zoom: 16,
           streetViewControl: false
         });
 
         // Set the initial Street View camera to the center of the map
-        sv.getPanorama({location: berkeley, radius: 50}, processSVData);
+        sv.getPanorama({location: OmniProv_Hotel, radius: 50}, processSVData);
 
         // Look for a nearby Street View panorama when the map is clicked.
         // getPanorama will return the nearest pano when the given
