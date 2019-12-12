@@ -2,7 +2,7 @@
 // It will allow users to find all hotels in a given place, within a given
 // country. It then displays markers for all the hotels returned,
 // with on-click details for each hotel.
-var map,mapX,mapX2, places, infoWindow;
+var map,mapX,mapX2, panorama, places, infoWindow;
 var markers = [];
 var autocomplete;
 var countryRestrict = {'country': 'us'};
@@ -74,7 +74,7 @@ function initMap() {
           streetViewControl: false
         });
         var OmniProv_Hotel = {lat: 41.825491, lng: -71.415729};
-        var panorama = new google.maps.StreetViewPanorama(
+        panorama = new google.maps.StreetViewPanorama(
           document.getElementById('mapX'), {
             position: OmniProv_Hotel,
             pov: {
@@ -82,14 +82,14 @@ function initMap() {
               pitch: -4
             }
           });
-      map.setStreetView(panorama);
+      // map.setStreetView(panorama);
         mapX = new google.maps.Map(document.getElementById('mapX'), {
 
           // var fenway = {lat: 42.345573, lng: -71.098326};
         // var map = new google.maps.Map(document.getElementById('map'), {
           // center: fenway,
-          // zoom: 14
-          zoom: countries['us'].zoom,
+          zoom: 14,
+          // zoom: countries['us'].zoom,
           center: countries['us'].center,
           mapTypeId: 'satellite',
           mapTypeControl: false,
@@ -293,8 +293,8 @@ function showInfoWindow() {
                 {
                   location: 
                     {
-                      lat: marker.internalPostition.lat(),
-                      lng: marker.internalPostition.lng()
+                      lat: marker.internalPosition.lat(),
+                      lng: marker.internalPosition.lng()
                     },
                   radius: 50
                 },

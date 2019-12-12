@@ -9,16 +9,16 @@
     /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
        #map {
-        height: 30%;
+        height: 40%;
       }
       #mapX {
-        height: 30%;
+        height: 45%;
         width: 50%;
         float: left;
         /* display: inline-table; */
       }
       #mapX2 {
-        height: 30%;
+        height: 45%;
         width: 50%;
         float: left;
         /* display: inline-block; */
