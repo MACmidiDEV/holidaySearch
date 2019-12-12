@@ -36,6 +36,22 @@ html, body {
   #info-content{
       
   }
+  .pac-container{
+    background-color: rgba(114, 180, 147, 0.941);
+  }
+  .pac-item {
+    color: cyan;
+    background-color: rgba(170, 153, 211, 0.763);
+  }
+  .pac-icon{}
+  .pac-matched{
+    background-color: cyan;
+  }
+  .pac-item-query{
+    background-color: rgb(200, 132, 218 0.8);
+    font-size: 32px;
+  }
+
   .hotel-search {
       /* bottom: 50%; */
       -webkit-box-align: center;
@@ -47,11 +63,12 @@ html, body {
       display: -ms-flexbox;
       display: flex;
       left: 0;
-      top: 0; */
-      width: 25%; 
       /* margin-left: 28%; */
       /* margin-right: 30%; */
+      /* top: 5; */
+      width: 25%; 
       position: absolute;
+      margin-top: 15px;
       /* position: relative; */
       z-index: 1;
       
@@ -64,7 +81,7 @@ html, body {
     /* left: 442px; */
     left: 20px;
     /* bottom: 0%; */
-    top: 8%;
+    top: 11%;
     cursor: pointer;
     overflow-x: hidden;
   }
@@ -77,6 +94,7 @@ html, body {
     -ms-flex: 1 1 190px;
     flex: 1 1 190px;
     margin: 0 8px;
+    
   }
   #controls {
     -webkit-box-flex: 1 1 140px;
@@ -85,13 +103,17 @@ html, body {
   }
   #autocomplete {
     width: 100%;
+    color: black;
+    font-size: 32px;
+    background-color: rgba(170, 153, 211, 0.763);
   }
   #country {
+    margin-left: 15px;
     width: 100%;
   }
   .placeIcon {
-    width: 20px;
-    height: 34px;
+    width: 40px;
+    height: 54px;
     margin: 4px;
   }
   .hotelIcon {
@@ -99,7 +121,7 @@ html, body {
     height: 24px;
   }
   #results{
-    font-size: 34px;;
+    font-size: 34px;
   }
   #resultsTable {
     border-collapse: collapse;
@@ -127,6 +149,7 @@ html, body {
   }
   .iw_table_icon {
     text-align: right;
+    
   } 
   
   
