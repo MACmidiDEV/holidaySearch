@@ -143,16 +143,17 @@ var countries = {
 // }
 
 
+
 function initMap() {
-  var sv = new google.maps.StreetViewService();
-  var OmniProv_Hotel = {lat: 41.825491, lng: -71.415729};
+  // var sv = new google.maps.StreetViewService();
+  var OmniProv_Hotel = {lat: 41.825491, lng: -71.41579};
   var sv = new google.maps.StreetViewService();
 
   hotelSearchMap = new google.maps.Map(document.getElementById('hotelSearchMap'), {
     center: OmniProv_Hotel,
     zoom: 18,
     streetViewControl: true,
-    mapTypeId: 'satellite',
+    mapTypeId: 'hybrid',
     // zoom: countries['us'].zoom,
     // center: countries['us'].center,
     mapTypeControl: false,
@@ -163,6 +164,7 @@ function initMap() {
 
   panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'));
 
+
   // Set up the map.
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: countries['us'].zoom,
@@ -171,8 +173,13 @@ function initMap() {
           mapTypeControl: true,
           panControl: true,
           zoomControl: true,
-          streetViewControl: true
+          streetViewControl: true,
+          
+          
+
+          
   });
+  
 
   // Set the initial Street View camera to the center of the map
   sv.getPanorama({location: OmniProv_Hotel, radius: 50}, processSVData);
@@ -276,7 +283,7 @@ function onPlaceChanged() {
         if (place.geometry) {
           // hotelSearchMap.setCenter(place.geometry.location);
           hotelSearchMap.panTo(place.geometry.location);
-          hotelSearchMap.setZoom(15);
+          hotelSearchMap.setZoom(18);
 
           // map.panTo(place.geometry.location);
           map.setCenter(place.geometry.location);
