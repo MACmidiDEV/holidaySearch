@@ -180,7 +180,7 @@ function initMap() {
     sv.getPanorama({location: event.latLng, radius: 50}, processSVData);
   });
 
-hotelSearchMap.addListener('click', function(event) {
+  hotelSearchMap.addListener('click', function(event) {
     sv.getPanorama({location: event.latLng, radius: 50}, processSVData);
   });
 
@@ -247,8 +247,8 @@ hotelSearchMap.addListener('click', function(event) {
               componentRestrictions: countryRestrict
             });
         places = new google.maps.places.PlacesService(hotelSearchMap);
-        places = new google.maps.places.PlacesService(map);
-        places = new google.maps.places.PlacesService(pano);
+        // places = new google.maps.places.PlacesService(map);
+        // places = new google.maps.places.PlacesService(pano);
 
 
         autocomplete.addListener('place_changed', onPlaceChanged);
@@ -271,15 +271,17 @@ function onPlaceChanged() {
         if (place.geometry) {
           // hotelSearchMap.setCenter(place.geometry.location);
           hotelSearchMap.panTo(place.geometry.location);
-          hotelSearchMap.setZoom(18);
-
+          // hotelSearchMap.setZoom(18);
+          hotelSearchMap.setZoom(15);
+      
+          // 
           // map.panTo(place.geometry.location);
           map.setCenter(place.geometry.location);
           map.setZoom(18);
 
           // pano.panTo(place.geometry.location);
-          pano.setCenter(place.geometry.location);
-          pano.setZoom(18);
+          // pano.setCenter(place.geometry.location);
+          // pano.setZoom(18);
 
 
           search();
@@ -312,6 +314,8 @@ function search() {
                 animation: google.maps.Animation.DROP,
                 icon: markerIcon
               });
+              console.log(markers[i])
+              console.log(markers[i])
               // If the user clicks a hotel marker, show the details of that hotel
               // in an info window.
               markers[i].placeResult = results[i];
@@ -366,9 +370,9 @@ function setAutocompleteCountry() {
 
 function dropMarker(i) {
         return function() {
-          markers[i].setMap(hotelSearchMap);
+          // markers[i].setMap(hotelSearchMap);
           markers[i].setMap(map);
-          markers[i].setMap(pano);
+          // markers[i].setMap(pano);
         };
 }
 
@@ -410,7 +414,7 @@ function clearResults() {
 // Get the place details for a hotel. Show the information in an info window,
 // anchored on the marker for the hotel that the user selected.
 function showInfoWindow() {
-        var marker = this;
+        var marker = marker;
         places.getDetails({placeId: marker.placeResult.place_id},
             function(place, status) {
               if (status !== google.maps.places.PlacesServiceStatus.OK) {
