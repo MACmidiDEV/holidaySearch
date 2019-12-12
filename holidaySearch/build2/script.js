@@ -165,9 +165,13 @@ function initMap() {
 
   // Set up the map.
   map = new google.maps.Map(document.getElementById('map'), {
-    center: OmniProv_Hotel,
-    zoom: 16,
-    streetViewControl: true
+    zoom: countries['us'].zoom,
+          center: countries['us'].center,
+          mapTypeId: google.maps.Map.SATELLITE,
+          mapTypeControl: true,
+          panControl: true,
+          zoomControl: true,
+          streetViewControl: true
   });
 
   // Set the initial Street View camera to the center of the map
@@ -179,8 +183,9 @@ function initMap() {
   map.addListener('click', function(event) {
     sv.getPanorama({location: event.latLng, radius: 50}, processSVData);
   });
+  
 
-  hotelSearchMap.addListener('click', function(event) {
+hotelSearchMap.addListener('click', function(event) {
     sv.getPanorama({location: event.latLng, radius: 50}, processSVData);
   });
 
@@ -271,17 +276,15 @@ function onPlaceChanged() {
         if (place.geometry) {
           // hotelSearchMap.setCenter(place.geometry.location);
           hotelSearchMap.panTo(place.geometry.location);
-          // hotelSearchMap.setZoom(18);
           hotelSearchMap.setZoom(15);
-      
-          // 
+
           // map.panTo(place.geometry.location);
           map.setCenter(place.geometry.location);
           map.setZoom(18);
 
           // pano.panTo(place.geometry.location);
-          // pano.setCenter(place.geometry.location);
-          // pano.setZoom(18);
+        //   pano.setCenter(place.geometry.location);
+        //   pano.setZoom(18);
 
 
           search();
@@ -295,7 +298,7 @@ function onPlaceChanged() {
 function search() {
         var search = {
           bounds: hotelSearchMap.getBounds(),
-          // bounds: map.getBounds(),
+        //   bounds: map.getBounds(),
           types: ['lodging']
         };
 
@@ -315,7 +318,7 @@ function search() {
                 icon: markerIcon
               });
               console.log(markers[i])
-              console.log(markers[i])
+              console.log(results[i])
               // If the user clicks a hotel marker, show the details of that hotel
               // in an info window.
               markers[i].placeResult = results[i];
@@ -370,9 +373,9 @@ function setAutocompleteCountry() {
 
 function dropMarker(i) {
         return function() {
-          // markers[i].setMap(hotelSearchMap);
+        //   markers[i].setMap(hotelSearchMap);
           markers[i].setMap(map);
-          // markers[i].setMap(pano);
+        //   markers[i].setMap(pano);
         };
 }
 
@@ -414,7 +417,7 @@ function clearResults() {
 // Get the place details for a hotel. Show the information in an info window,
 // anchored on the marker for the hotel that the user selected.
 function showInfoWindow() {
-        var marker = marker;
+        var marker = this;
         places.getDetails({placeId: marker.placeResult.place_id},
             function(place, status) {
               if (status !== google.maps.places.PlacesServiceStatus.OK) {
@@ -522,8 +525,3 @@ function buildIWContent(place) {
           document.getElementById('iw-website-row').style.display = 'none';
         }
 }
-
-
-
-
-
