@@ -393,22 +393,21 @@ function addResult(result, i) {
         var markerIcon = MARKER_PATH + markerLetter + '.png';
 
         var tr = document.createElement('tr');
-        tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+        tr.style.backgroundColor = (i % 2 === 0 ? 'teal 0.8' : 'green 0.8');
         tr.onclick = function() {
           google.maps.event.trigger(markers[i], 'click');
         };
-
+        var icon = document.createElement('img');
         var iconTd = document.createElement('td');
         var nameTd = document.createElement('td');
-        var icon = document.createElement('img');
         icon.src = markerIcon;
-        icon.setAttribute('class', 'placeIcon');
         icon.setAttribute('className', 'placeIcon');
+        icon.setAttribute('class', 'placeIcon');
         var name = document.createTextNode(result.name);
-        iconTd.appendChild(icon);
         nameTd.appendChild(name);
-        tr.appendChild(iconTd);
+        iconTd.appendChild(icon);
         tr.appendChild(nameTd);
+        tr.appendChild(iconTd);
         results.appendChild(tr);
 }
 

@@ -98,16 +98,27 @@ html, body {
     width: 24px;
     height: 24px;
   }
+  #results{
+    font-size: 34px;;
+  }
   #resultsTable {
     border-collapse: collapse;
+    background-color: rgba(170, 153, 211, 0.763);
+    /* opacity: 0.8; */
+    color: black;
+    /* opacity: 0.8; */
     /* width: 240px; */
     /* margin-left: 80%; */
   }
+  /* .td{ */
+    /* background-color: blue; */
+  /* } */
   #rating {
     font-size: 13px;
     font-family: Arial Unicode MS;
   }
   .iw_table_row {
+    
     height: 18px;
   }
   .iw_attribute_name {
