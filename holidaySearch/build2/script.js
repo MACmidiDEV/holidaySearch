@@ -152,10 +152,10 @@ function initMap() {
     center: OmniProv_Hotel,
     zoom: 18,
     streetViewControl: true,
-    mapTypeId: 'satellite'
+    mapTypeId: 'satellite',
     // zoom: countries['us'].zoom,
     // center: countries['us'].center,
-    // mapTypeControl: false,
+    mapTypeControl: false,
     // panControl: false,
     // zoomControl: false,
     // streetViewControl: false
