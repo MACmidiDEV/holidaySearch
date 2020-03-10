@@ -5,8 +5,10 @@
 #hotelSearchMap{
   height: 50%;
   width: 74.5%;
+  width: 64.5%;
+  /* width: 100%; */
   float: right;
-
+  z-index: -1;
 }
 #map {
   height: 50%;
@@ -78,7 +80,7 @@ html, body {
       /* margin-left: 28%; */
       /* margin-right: 30%; */
       /* top: 5; */
-      width: 25%; 
+      width: 40%; 
       position: absolute;
       /* margin-top: 15px; */
       /* position: relative; */
@@ -89,14 +91,14 @@ html, body {
   }
   #listing {
     position: absolute;
-    width: 25%;
-    height: 18%;
+    width: 40%;
+    height: 32.5%;
     overflow: auto;
     /* left: 442px; */
     /* left: 20px; */
     /* bottom: 0%; */
     /* margin-top: 2%; */
-    top: 230px;
+    top: 195px;
     cursor: pointer;
     overflow-x: hidden;
   }
@@ -142,7 +144,7 @@ html, body {
     font-size: 24px;
   }
   #resultsTable {
-    margin-left: 2%;
+    margin-left: 1%;
     /* left: 100%; */
     /* border-collapse: collapse; */
     background-color: rgba(170, 153, 211, 0.763);
@@ -152,6 +154,7 @@ html, body {
     /* width: 240px; */
     /* margin-left: 80%; */
     width: 100%;
+    /* height: 10%; */
   }
   /* .td{ 
     background-color: blue;
@@ -176,6 +179,11 @@ html, body {
 
   #sidebar-brand-country {
     background-color: rgba(9, 238, 39, 0.377);
+    /* width: 50%; */
+  }
+
+  .hotel-search {
+    /* display: none; */
   }
   
   
