@@ -1,0 +1,180 @@
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+
+#hotelSearchMap{
+  height: 50%;
+  width: 74.5%;
+  float: right;
+
+}
+#map {
+  height: 50%;
+  width: 50%;
+  float: left;
+  /* display: inline-table; */
+}
+#pano {
+  height: 50%;
+  width: 50%;
+  float: left;
+  /* display: inline-block; */
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    /* margin: 10px; */
+    padding: 0;
+    background-color: rgba(42, 14, 58, 0.626);
+    /* background-image: url("/bg1v.jpg"); */
+    /* background-size: cover; */
+    /* background-position: center; */
+  }
+  body {
+      padding: 0 !important;
+      /* background-image: url("/bg1v.jpg"); */
+      /* opacity: 0.4; */
+  }
+  
+  #country{
+    color: rgb(255, 255, 255);
+    
+    background-color: rgba(114, 180, 147, 0.246);
+    height: 35px;
+  }
+  table {
+      font-size: 12px;
+  }
+  #info-content{
+      display: none;
+  }
+  .pac-container{
+    background-color: rgba(114, 180, 147, 0.941);
+  }
+  .pac-item {
+    color: cyan;
+    background-color: rgba(170, 153, 211, 0.763);
+  }
+  .pac-icon{}
+  .pac-matched{
+    background-color: cyan;
+  }
+  .pac-item-query{
+    background-color: rgb(200, 132, 218 0.8);
+    font-size: 32px;
+  }
+
+  .hotel-search {
+      /* bottom: 50%; */
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background: transparent;
+      /* background: rgb(174, 92, 92); 
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      left: 0;
+      /* margin-left: 28%; */
+      /* margin-right: 30%; */
+      /* top: 5; */
+      width: 25%; 
+      position: absolute;
+      /* margin-top: 15px; */
+      /* position: relative; */
+      /* z-index: 1; */
+      /* background-image: url("/bg1v.jpg"); */
+      /* background-color: aqua; */
+      
+  }
+  #listing {
+    position: absolute;
+    width: 25%;
+    height: 18%;
+    overflow: auto;
+    /* left: 442px; */
+    /* left: 20px; */
+    /* bottom: 0%; */
+    /* margin-top: 2%; */
+    top: 230px;
+    cursor: pointer;
+    overflow-x: hidden;
+  }
+  
+  #findhotels {
+    font-size: 14px;
+  }
+  #locationField {
+    -webkit-box-flex: 1 1 190px;
+    -ms-flex: 1 1 190px;
+    flex: 1 1 190px;
+    margin: 0 8px;
+    
+  }
+  #controls {
+    -webkit-box-flex: 1 1 140px;
+    -ms-flex: 1 1 140px;
+    flex: 1 1 140px;
+  }
+  #autocomplete {
+    width: 100%;
+    color: black;
+    font-size: 24px;
+    background-color: rgba(170, 153, 211, 0.763);
+  }
+  #country {
+    /* display: inline; */
+    margin-top: 3px;
+    margin-bottom: 13px;
+    width: 100%;
+    border: none;
+  }
+  .placeIcon {
+    width: 40px;
+    height: 54px;
+    margin: 4px;
+  }
+  .hotelIcon {
+    width: 24px;
+    height: 24px;
+  }
+  #results{
+    font-size: 24px;
+  }
+  #resultsTable {
+    margin-left: 2%;
+    /* left: 100%; */
+    /* border-collapse: collapse; */
+    background-color: rgba(170, 153, 211, 0.763);
+    /* opacity: 0.8; */
+    color:white;
+    /* opacity: 0.8; */
+    /* width: 240px; */
+    /* margin-left: 80%; */
+  }
+  /* .td{ 
+    background-color: blue;
+   } */
+  #rating {
+    font-size: 13px;
+    font-family: Arial Unicode MS;
+  }
+  .iw_table_row {
+    
+    height: 18px;
+  }
+  .iw_attribute_name {
+    font-weight: bold;
+    text-align: right;
+  }
+  .iw_table_icon {
+    text-align: right;
+    
+  } 
+
+
+  #sidebar-brand-country {
+    background-color: rgba(9, 238, 39, 0.377);
+  }
+  
+  
