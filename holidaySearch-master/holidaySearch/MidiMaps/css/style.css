@@ -27,7 +27,7 @@ html, body {
     height: 100%;
     /* margin: 10px; */
     padding: 0;
-    background-color: rgba(42, 14, 58, 0.626);
+    /* background-color: rgba(42, 14, 58, 0.626); */
     /* background-image: url("/bg1v.jpg"); */
     /* background-size: cover; */
     /* background-position: center; */
@@ -93,7 +93,7 @@ html, body {
   #listing {
     position: absolute;
     width: 39.5%;
-    height: 35%;
+    height: 27.5%;
     overflow: auto;
         overflow-x: auto;
     /* left: 442px; */
