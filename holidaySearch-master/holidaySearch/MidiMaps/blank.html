@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Holiday Destionation Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="bg.jpg">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="css/midiMaps.css" rel="stylesheet">
+  
+
+  </head>
+
+  <body>
+    
+
+    
+    
+     
+      
+        <div class="hotel-search">
+          <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      
+            <!-- Sidebar - Brand -->
+            <a id="sidebar-brand-country" class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+              <div class="sidebar-brand-icon rotate-n-15">
+                <!-- <i class="fas fa-tachometer-alt"></i> -->
+                <i class="fas fa-map"></i>
+              </div>
+              <div class="sidebar-brand-text mx-3"><sup>Midi</sup>|Maps</div>
+            </a>
+      
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+      
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+            </li>
+
+               <div id="locationField">
+                <div id="controls">
+                  <select id="country">
+                    <option value="all">All</option>
+                    <option value="au">Australia</option>
+                    <option value="br">Brazil</option>
+                    <option value="ca">Canada</option>
+                    <option value="fr">France</option>
+                    <option value="de">Germany</option>
+                    <option value="mx">Mexico</option>
+                    <option value="nz">New Zealand</option>
+                    <option value="it">Italy</option>
+                    <option value="za">South Africa</option>
+                    <option value="es">Spain</option>
+                    <option value="pt">Portugal</option>
+                    <option value="us" selected>U.S.A.</option>
+                    <option value="uk">United Kingdom</option>
+                  </select>
+                </div>
+            <input id="autocomplete" placeholder="Search and get away!" type="text" />
+          </div>
+      
+       
+      
+          </ul>
+          <div id="findhotels"></div>
+      
+       
+
+        </div>
+
+        <div id="listing">
+          <table id="resultsTable">
+            <tbody id="results"></tbody>
+          </table>
+        </div>
+        <!-- <div style="display: none"> -->
+        <div>
+          <div id="info-content">
+            <table>
+              <tr id="iw-url-row" class="iw_table_row">
+                <td id="iw-icon" class="iw_table_icon"></td>
+                <td id="iw-url"></td>
+              </tr>
+              <tr id="iw-address-row" class="iw_table_row">
+                <td class="iw_attribute_name">Address:</td>
+                <td id="iw-address"></td>
+              </tr>
+              <tr id="iw-phone-row" class="iw_table_row">
+                <td class="iw_attribute_name">Telephone:</td>
+                <td id="iw-phone"></td>
+              </tr>
+              <tr id="iw-rating-row" class="iw_table_row">
+                <td class="iw_attribute_name">Rating:</td>
+                <td id="iw-rating"></td>
+              </tr>
+              <tr id="iw-website-row" class="iw_table_row">
+                <td class="iw_attribute_name">Website:</td>
+                <td id="iw-website"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        
+
+        <div id="hotelSearchMap"></div>
+        <div id="map"></div>
+        <div id="pano"></div>
+
+
+        
+
+   
+    <script>
+      /*
+       * Click the map to set a new location for the Street View camera.
+       */
+
+      // var map;
+      // var panorama;
+
+      // function initMap() {
+      //   var berkeley = {lat: 37.869085, lng: -122.254775};
+      //   var OmniProv_Hotel = {lat: 41.825491, lng: -71.415729};
+      //   var sv = new google.maps.StreetViewService();
+
+      //   hotelSearchMap = new google.maps.Map(document.getElementById('hotelSearchMap'), {
+      //     center: OmniProv_Hotel,
+      //     zoom: 18,
+      //     streetViewControl: true,
+      //     mapTypeId: 'satellite'
+      //     // zoom: countries['us'].zoom,
+      //     // center: countries['us'].center,
+      //     // mapTypeControl: false,
+      //     // panControl: false,
+      //     // zoomControl: false,
+      //     // streetViewControl: false
+      //   });
+
+      //   panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'));
+
+      //   // Set up the map.
+      //   map = new google.maps.Map(document.getElementById('map'), {
+      //     center: OmniProv_Hotel,
+      //     zoom: 16,
+      //     streetViewControl: true
+      //   });
+
+      //   // Set the initial Street View camera to the center of the map
+      //   sv.getPanorama({location: OmniProv_Hotel, radius: 50}, processSVData);
+
+      //   // Look for a nearby Street View panorama when the map is clicked.
+      //   // getPanorama will return the nearest pano when the given
+      //   // radius is 50 meters or less.
+      //   map.addListener('click', function(event) {
+      //     sv.getPanorama({location: event.latLng, radius: 50}, processSVData);
+      //   });
+      
+      // hotelSearchMap.addListener('click', function(event) {
+      //     sv.getPanorama({location: event.latLng, radius: 50}, processSVData);
+      //   });
+      // }
+
+      // function processSVData(data, status) {
+      //   if (status === 'OK') {
+      //     var marker = new google.maps.Marker({
+      //       position: data.location.latLng,
+      //       map: map,
+      //       title: data.location.description
+      //     });
+
+      //     panorama.setPano(data.location.pano);
+      //     panorama.setPov({
+      //       heading: 270,
+      //       pitch: 0
+      //     });
+      //     panorama.setVisible(true);
+
+      //     marker.addListener('click', function() {
+      //       var markerPanoID = data.location.pano;
+      //       // Set the Pano to use the passed panoID.
+      //       panorama.setPano(markerPanoID);
+      //       panorama.setPov({
+      //         heading: 270,
+      //         pitch: 0
+      //       });
+      //       panorama.setVisible(true);
+      //     });
+      //   } else {
+      //     console.error('Street View data not found for this location.');
+      //   }
+      // }
+
+    </script>
+
+
+
+
+     <script src="js/script.js"></script>
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKJHlCqiGmPA5Rqlw6FW3t_BJrk4rSkoE&callback=initMap&libraries=places"
+      async defer></script>
+
+
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+      <!-- Core plugin JavaScript-->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    
+      <!-- Custom scripts for all pages-->
+      <script src="js/sb-admin-2.min.js"></script>
+    
+      <!-- Page level plugins -->
+      <script src="vendor/chart.js/Chart.min.js"></script>
+    
+      <!-- Page level custom scripts -->
+      <script src="js/demo/chart-area-demo.js"></script>
+      <script src="js/demo/chart-pie-demo.js"></script>
+
+  </body>
+</html>
