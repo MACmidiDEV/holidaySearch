@@ -148,6 +148,7 @@ html, body {
     width: 24px;
     height: 24px;
   }
+
   #results{
     font-size: 24px;
   }
@@ -188,7 +189,7 @@ html, body {
 
   #sidebar-brand-country {
     background-color: rgba(9, 238, 39, 0.377);
-    /* width: 50%; */
+    padding: 20px;
   }
 
 
@@ -198,4 +199,5 @@ html, body {
     
   }
   
+
   
