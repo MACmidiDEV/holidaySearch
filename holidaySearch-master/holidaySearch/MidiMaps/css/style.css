@@ -100,7 +100,7 @@ html, body {
     /* left: 20px; */
     /* bottom: 0%; */
     /* margin-top: 2%; */
-    top: 190px;
+    top: 167.5px;
     cursor: pointer;
     overflow-x: hidden;
 }
@@ -186,6 +186,12 @@ html, body {
 
   .hotel-search {
     /* display: none; */
+    /* width: 50%; */
+  }
+
+  #accordionSidebar {
+    /* display: none; */
+    width: 100%;
   }
   
   
