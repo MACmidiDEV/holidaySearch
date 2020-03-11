@@ -87,7 +87,7 @@ html, body {
       /* z-index: 1; */
       /* background-image: url("/bg1v.jpg"); */
       /* background-color: aqua; */
-      
+      color: rgb(255, 255, 255);
   }
   
   #listing {
@@ -126,7 +126,7 @@ html, body {
   }
   #autocomplete {
     width: 100%;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 14px;
     background-color: rgba(170, 153, 211, 0.233);
   }
