@@ -37,19 +37,19 @@
 
 /* // Extra small devices (portrait phones, less than 576px) */
 /* // No media query for `xs` since this is the default in Bootstrap */
-@media (min-width: 371px) {
+@media (min-width: 374px) {
     #results{
         height: 10px;
-        font-size: 8px;
+        font-size: 8px;        
       }
       select {
-          font-size: xx-small;
+          font-size: small;
       }
       #country {
           height: 2px;
       }
       #listing {
-        height: 322px;
+        height: 745px;
         top:42px;
     }
     #controls {
@@ -63,6 +63,9 @@
         font-size: 20px;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.199);
+    }
+    #locationField {
+        /* display: none; */
     }
 
 }
@@ -86,12 +89,12 @@
 
     }
     #locationField {
-        margin-top: 245px;
+        margin-top: 425px;
     }
     #listing {
-        height: 245px;
+        height: 425px;
         top:42px;
-    }
+    }    
    
   .placeIcon {
   width: 30px;
@@ -128,10 +131,11 @@
         font-size: 18px;
       }
       #locationField {
-          margin-top: 270px;
+          margin-top: 420px;
       }
       #listing {
           height: 275px;
+          height: 420px;
           top:75px;
       }
      
@@ -171,10 +175,10 @@
         font-size: 18px;
       }
       #locationField {
-          margin-top: 270px;
+          margin-top: 775px;
       }
       #listing {
-          height: 275px;
+          height: 775px;
           top:75px;
       }
      
