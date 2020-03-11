@@ -56,7 +56,7 @@
 @media (min-width: 768px) {
     .sidebar , .sidebar-brand {
         height: 2em;
-        display: none;
+        /* display: none; */
     }
 }
 
