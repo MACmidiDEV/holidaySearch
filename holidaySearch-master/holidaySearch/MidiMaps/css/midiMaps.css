@@ -28,7 +28,7 @@
         /* background-image: repeating-linear-gradient(rgba(93, 21, 181, 0.93) 8.39%, #af3136 89.92%); */
         background-size: cover;
         background-attachment: fixed;
-        /* background-zoom: cover; */
+        overflow: hidden;
         }
         
 #placeholder {
