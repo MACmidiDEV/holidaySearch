@@ -179,7 +179,7 @@
         font-size: 18px;
       }
       #locationField {
-          margin-top: 300px;
+          margin-top: 120px;
       }
       #listing {
           height: 200px;
@@ -205,7 +205,7 @@
     }
     #autocomplete {
         color: black;
-        /* margin-top: 10px; */
+        margin-top: -200px;
         font-size: 32px;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.199);
@@ -237,10 +237,10 @@
         margin-top: 8%;
         font-size: 20em;
     }  
-    #iLogo{
+    /* #iLogo{
         height: 180px;
         font-size: 1em;
-    }
+    } */
     #listing {
         top:350px;
     }
@@ -250,7 +250,7 @@
         font-size: 14em;
         /* background-color: rgba(255, 255, 255, 0.215); */
         background-color: rgba(0, 0, 0, 0.452);
-        margin-top: 0%;
+        /* margin-top: -100%; */
       }
       #resultsTable {
         margin-left: 1%;
@@ -264,11 +264,11 @@
         /* margin-left: 80%; */
         width: 100%;
         /* height: 10%; */
-        font-size: xx-small;
+        font-size: large;
       }  
       #country {
         color: rgba(0, 0, 0, 0.763);
-        /* margin-top: 200px; */
+        margin-top: 200px;
         /* margin-bottom: -13px; */
         width: 50%;
         border: none;
@@ -277,7 +277,7 @@
         -webkit-box-flex: 1 1 140px;
         -ms-flex: 1 1 140px;
         flex: 1 1 140px;
-        /* top: 500px; */
+        /* top: 1500px; */
       }
       
 }
