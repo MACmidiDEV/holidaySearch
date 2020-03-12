@@ -5,32 +5,32 @@
     /* background-position: center; */
     background-image: linear-gradient(0.33turn, #761381 10.08%, #c22e1e);
     background-size: contain;
-    }
+}
 
-    .midi {
-        background-color: #761381;
-        height: fit-content;
-        width: fit-content;
-    }
+.midi {
+    background-color: #761381;
+    height: fit-content;
+    width: fit-content;
+}
 
-    #midiNav {
-        background-image: url("../img/bg1.jpg");
-        background-position: center center;
-        background-size: cover;
-    }
+#midiNav {
+    background-image: url("../img/bg1.jpg");
+    background-position: center center;
+    background-size: cover;
+}
 
-    .bg-gradient-primary {
-        /* background-color: #4e73df; */
-        /* background-image: url("img/undraw_posting_photo.svg"); */
-        background-image: url("../img/bg11v.jpg");
-        background-position: center;
-        background-origin: border-box;
-        /* background-image: repeating-linear-gradient(rgba(93, 21, 181, 0.93) 8.39%, #af3136 89.92%); */
-        background-size: cover;
-        background-attachment: fixed;
-        overflow: hidden;
-        }
-        
+.bg-gradient-primary {
+    /* background-color: #4e73df; */
+    /* background-image: url("img/undraw_posting_photo.svg"); */
+    background-image: url("../img/bg11v.jpg");
+    background-position: center;
+    background-origin: border-box;
+    /* background-image: repeating-linear-gradient(rgba(93, 21, 181, 0.93) 8.39%, #af3136 89.92%); */
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
 #placeholder {
     color: chartreuse;
 }
@@ -38,26 +38,31 @@
 /* // Extra small devices (portrait phones, less than 576px) */
 /* // No media query for `xs` since this is the default in Bootstrap */
 @media (min-width: 374px) {
-    #results{
+    #results {
         height: 10px;
-        font-size: 8px;        
-      }
-      select {
-          font-size: small;
-      }
-      #country {
-          height: 12px;
-          font-size: 14px;
-          margin-top: -100px;
-      }
-      #listing {
-        height: 745px;
-        top:42px;
+        font-size: 8px;
     }
-    #controls {
-        height: 0%;
+
+    select {
+        font-size: small;
+    }
+
+    #country {
+        height: 12px;
+        font-size: 14px;
         margin-top: -100px;
     }
+
+    #listing {
+        height: 745px;
+        top: 42px;
+    }
+
+    #controls {
+        height: 0%;
+        margin-top: -280px;
+    }
+
     #autocomplete {
         color: black;
         /* margin-top: -100px; */
@@ -66,6 +71,7 @@
         width: 100%;
         background-color: rgba(255, 255, 255, 0.199);
     }
+
     #locationField {
         /* display: none; */
     }
@@ -77,132 +83,158 @@
     .sidebar .sidebar-brand {
         height: 2em;
     }
-    #results{
+
+    #results {
         height: 200px;
         font-size: 16px;
-      }
-      select {
-          font-size: small;
-          height: 40px;
-      }
-      #country {
+    }
+
+    select {
+        font-size: small;
+        height: 40px;
+    }
+
+    #country {
         height: 12px;
         width: 100%;
 
     }
+
     #locationField {
         margin-top: 300px;
     }
+
     #listing {
         height: 300px;
-        top:42px;
-    }    
-   
-  .placeIcon {
-  width: 30px;
-  height: 32px;
-  margin: 2px;
-  }
-  #controls {
-      float: right;
-      width: 100%;
-      height: 0;
-      margin-top: 10px;
-  }
-  #country {
-      width: 80%;
-      margin-bottom: 0;
-      float: right;
-      height: 18px;
-  }
-  #autocomplete {
-      color: black;
-      margin-top: 5px;
-      margin-bottom: -20px;
-      margin-left: -5px;
-      font-size: 18px;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.199);
-  }
-} 
+        top: 42px;
+    }
+
+    .placeIcon {
+        width: 30px;
+        height: 32px;
+        margin: 2px;
+    }
+
+    #controls {
+        float: right;
+        width: 100%;
+        height: 0;
+        margin-top: 10px;
+    }
+
+    #country {
+        width: 80%;
+        margin-bottom: 0;
+        float: right;
+        height: 18px;
+    }
+
+    #autocomplete {
+        color: black;
+        margin-top: 5px;
+        margin-bottom: -20px;
+        margin-left: -5px;
+        font-size: 18px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.199);
+    }
+}
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .sidebar , .sidebar-brand {
+
+    .sidebar,
+    .sidebar-brand {
         height: 1em;
     }
-    #results{
+
+    #results {
         font-size: 18px;
-      }
-      #locationField {
-          margin-top: 420px;
-      }
-      #listing {
-          height: 275px;
-          height: 420px;
-          top:75px;
-      }
-     
-    .placeIcon {
-    width: 30px;
-    height: 32px;
-    margin: 2px;
     }
+
+    #locationField {
+        margin-top: 220px;
+    }
+
+    #listing {
+        height: 275px;
+        height: 420px;
+        top: 75px;
+    }
+
+    .placeIcon {
+        width: 30px;
+        height: 32px;
+        margin: 2px;
+    }
+
     #controls {
         float: right;
         width: 100%;
         height: 0;
         /* margin-top: 10px; */
     }
+
     #country {
         width: 100%;
         margin-bottom: 0;
         margin-left: 15px;
         height: 22px;
     }
+
     #autocomplete {
         color: black;
-        margin-top: 7px;
+        /* margin-top: 7px; */
         font-size: 22px;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.199);
     }
-    
+
 }
+
+
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .sidebar , .sidebar-brand {
+
+    .sidebar,
+    .sidebar-brand {
         height: 2em;
     }
-    #results{
+
+    #results {
         font-size: 18px;
-      }
-      #locationField {
-          margin-top: 120px;
-      }
-      #listing {
-          height: 200px;
-          top:75px;
-      }
-     
-    .placeIcon {
-    width: 30px;
-    height: 32px;
-    margin: 2px;
     }
+
+    #locationField {
+        margin-top: 130px;
+    }
+
+    #listing {
+        height: 200px;
+        top: 75px;
+    }
+
+    .placeIcon {
+        width: 30px;
+        height: 32px;
+        margin: 2px;
+    }
+
     #controls {
         float: right;
         width: 100%;
         height: 0;
         /* margin-top: 50px; */
     }
+
     #country {
         width: 100%;
         margin-bottom: 0;
         margin-left: 5%;
-        height: 42px;
+        height: 22px;
     }
+
     #autocomplete {
         color: black;
         margin-top: -200px;
@@ -212,38 +244,50 @@
         border: 1px solid rgba(255, 255, 255, 0.381);
         border-radius: .3em;
     }
-    
+
+}
+
+/* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ <- iphoneMediaquery{source} */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    #locationField {
+        margin-top: 315px;
+        margin-top: 315px;
+    }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    #results{
+    #results {
         font-size: 20px;
-      }
+    }
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    #results{
+    #results {
         font-size: 28px;
-      }
+    }
 }
 
 @media (min-width: 4800px) {
-    #results{
+    #results {
         font-size: 112px;
-      }
+    }
+
     #sidebar-brand-country {
         margin-top: 8%;
         font-size: 20em;
-    }  
+    }
+
     /* #iLogo{
         height: 180px;
         font-size: 1em;
     } */
     #listing {
-        top:350px;
+        top: 350px;
     }
+
     #autocomplete {
         width: 100%;
         color: rgb(255, 255, 255);
@@ -251,33 +295,40 @@
         /* background-color: rgba(255, 255, 255, 0.215); */
         background-color: rgba(0, 0, 0, 0.452);
         /* margin-top: -100%; */
-      }
-      #resultsTable {
+    }
+
+    #resultsTable {
         margin-left: 1%;
         /* left: 100%; */
         /* border-collapse: collapse; */
         background-color: rgba(170, 153, 211, 0.763);
         /* opacity: 0.8; */
-        color:white;
+        color: white;
         /* opacity: 0.8; */
         /* width: 240px; */
         /* margin-left: 80%; */
         width: 100%;
         /* height: 10%; */
         font-size: large;
-      }  
-      #country {
+    }
+
+    #country {
         color: rgba(0, 0, 0, 0.763);
         margin-top: 200px;
         /* margin-bottom: -13px; */
         width: 50%;
         border: none;
-      }
-      #controls {
+    }
+
+    #controls {
         -webkit-box-flex: 1 1 140px;
         -ms-flex: 1 1 140px;
         flex: 1 1 140px;
         /* top: 1500px; */
-      }
-      
+    }
+
 }
+
+
+
+
