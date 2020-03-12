@@ -115,7 +115,7 @@ html, body {
     /* margin: 0 auto; */
     margin: 0 auto;
     width: 90%;
-    margin-right: 5%;
+    /* margin-right: 2.5%; */
 
     
   }
@@ -137,7 +137,7 @@ html, body {
     margin-bottom: 13px;
     width: 50%;
     border: none;
-  
+    font-size: 25px;
   }
   .placeIcon {
     width: 40px;
