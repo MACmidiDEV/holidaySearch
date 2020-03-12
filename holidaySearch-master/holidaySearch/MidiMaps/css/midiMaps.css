@@ -238,7 +238,7 @@
     #autocomplete {
         color: black;
         margin-top: -200px;
-        font-size: 32px;
+        font-size: 26px;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.199);
         border: 1px solid rgba(255, 255, 255, 0.381);
@@ -251,8 +251,10 @@
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
     #locationField {
-        margin-top: 315px;
-        margin-top: 315px;
+        margin-top: 295px;        
+    }
+    #listing {
+        top: 350px;
     }
 }
 
