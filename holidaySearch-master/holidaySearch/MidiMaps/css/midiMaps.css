@@ -215,6 +215,10 @@
 
 }
 
+#info-content{
+    overflow: -webkit-paged-y !important;    
+  }
+
 
 
 /* // Medium devices (tablets, 768px and up) */
