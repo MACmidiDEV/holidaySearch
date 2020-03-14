@@ -220,6 +220,7 @@
 
 #info-content{
     overflow: -webkit-paged-y !important;    
+    height: 0px;
   }
 
 
@@ -420,6 +421,11 @@
     #locationField {
         /* display: none; */
     }
+    
+    #info-content{
+        overflow: -webkit-paged-y !important;    
+        height: 0px;
+      }
 
 }
 
