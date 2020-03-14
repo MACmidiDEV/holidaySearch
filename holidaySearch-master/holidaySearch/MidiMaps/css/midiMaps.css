@@ -70,7 +70,7 @@
     }
 
     #country {
-        height: 24px;
+        height: 28px;        
         color: rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0.164);
         font-size: 14px;
@@ -78,11 +78,12 @@
         border-radius: .5em;
         float: right;
         margin-right: -10px;
+        
     }
 
     #listing {
-        height: 24%;
-        top: 140px;
+        height: 35%;
+        top: 150px;
     }
 
     #controls {
@@ -408,22 +409,35 @@
     #country {
         color: rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0.164);
-        font-size: 10px;
+        font-size: 18px;
         border: 3px solid rgba(255, 255, 255, 0.164);
         border-radius: .5em;
         float: right;
         margin-right: -10px;
         width: 100%;
+        text-align: right;
     }
 
     #listing {
-        height: 35%;
+        height: 33%;
     }
 
     #controls {
         /* height: 0%; */
         /* margin-top: -280px; */
     }
+
+    /* #autocompleteX {
+        color: rgba(255, 255, 255, 0);
+        background-color: rgba(0, 0, 0, 0.459);
+        margin-left: -78px;
+        width: 120%;
+        font-size: 16px;
+        border: 3px solid rgba(0, 0, 0, 0.075);
+        border-radius: .5em;
+    
+        
+    } */
 
     #autocomplete {
         color: rgb(255, 255, 255);
