@@ -82,13 +82,14 @@ html, body {
     position: absolute;
     width: 40%;
     height: 27.5%;
+
     overflow: hidden;
     overflow-y: scroll;        
     /* left: 442px; */
     /* left: 20px; */
     /* bottom: 0%; */
     /* margin-top: 2%; */
-    top: 167.5px;
+    top: 162.5px;    
     cursor: pointer;
     overflow-x: visible;
     border-left: hidden;
@@ -149,7 +150,7 @@ html, body {
   }
   #results tr > td {
     border: 13px solid rgba(164, 159, 80, 0.17);
-    border-radius: 30%;
+    /* border-radius: 30%; */
   }
   #resultsTable {
     /* margin-left: 3%; */
@@ -191,7 +192,8 @@ html, body {
 
   #sidebar-brand-country {
     background-color: rgba(9, 238, 39, 0.13);
-    padding: 20px;
+    font-size: 2.2rem;
+    letter-spacing: 0.55rem;
   }
 
 

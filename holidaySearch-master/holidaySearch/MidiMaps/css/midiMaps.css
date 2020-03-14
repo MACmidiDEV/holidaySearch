@@ -38,16 +38,19 @@
 .resFix {
     height: 150px;
 }
+
 tr>td:hover {
-    
-    background-color: #8b8c8659;
+    padding-left: 10%;
+    background-color: #d0d0d059;
+    border-radius: 30em;
+
 }
 
-/* .placeIcon {
+.placeIcon {
     float: right;
     width: inherit;
 }
-*/
+
 .placeIcon:hover {
     float: left;
     background-color: none;
@@ -73,7 +76,7 @@ tr>td:hover {
         font-size: 20px;
         /* padding-bottom: 100px; */
         /* margin-bottom:100px ; */
-        
+
         /* overflow: hidden; */
         /* display: none; */
     }
@@ -84,7 +87,7 @@ tr>td:hover {
     }
 
     #country {
-        height: 28px;        
+        height: 28px;
         color: rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0.164);
         font-size: 14px;
@@ -92,12 +95,12 @@ tr>td:hover {
         border-radius: .5em;
         float: right;
         margin-right: -10px;
-        
+
     }
 
-    #listing {
-        height: 35%;
-        top: 150px;
+    #listing { 
+        height: 24%;
+        top: 134px;
     }
 
     #controls {
@@ -127,7 +130,8 @@ tr>td:hover {
 
 @mediaX (max-width: 575px) {
     .sidebar .sidebar-brand {
-        height: 2em;
+        height: 30px;
+        letter-spacing: 3.5em;
     }
 
     #results {
@@ -239,10 +243,10 @@ tr>td:hover {
 
 }
 
-#info-content{
-    overflow: -webkit-paged-y !important;    
+#info-content {
+    overflow: -webkit-paged-y !important;
     height: 0px;
-  }
+}
 
 
 
@@ -305,6 +309,7 @@ tr>td:hover {
     #locationField {
         /* margin-top: 295px;         */
     }
+
     #listing {
         /* top: 350px; */
     }
@@ -385,7 +390,7 @@ tr>td:hover {
 
 
 @media (min-height: 567px) {
-    
+
     #locationField {
         /* display: none; */
         margin-top: 2px;
@@ -397,10 +402,11 @@ tr>td:hover {
         font-size: 20px;
         /* padding-bottom: 100px; */
         /* margin-bottom:100px ; */
-        
+
         /* overflow: hidden; */
         /* display: none; */
     }
+
     #resultsTable {
         /* margin-left: 1%; */
         /* left: 100%; */
@@ -469,12 +475,10 @@ tr>td:hover {
     #locationField {
         /* display: none; */
     }
-    
-    #info-content{
-        overflow: -webkit-paged-y !important;    
+
+    #info-content {
+        overflow: -webkit-paged-y !important;
         height: 0px;
-      }
+    }
 
 }
-
-
