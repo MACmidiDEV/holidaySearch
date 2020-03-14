@@ -48,7 +48,7 @@ html, body {
       font-size: 12px;
   }
   #info-content{
-      display: none;
+    overflow: -webkit-paged-y;    
   }
   .pac-container{
     background-color: rgba(114, 180, 147, 0.941);

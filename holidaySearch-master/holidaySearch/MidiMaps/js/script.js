@@ -333,6 +333,7 @@ function search() {
               google.maps.event.addListener(markers[i], 'click', showInfoWindow);
               setTimeout(dropMarker(i), i * 100);
               addResult(results[i], i);
+              
             }
           }
         });
@@ -386,7 +387,6 @@ function dropMarker(i) {
         //   markers[i].setMap(pano);
         };
 }
-
 
 function addResult(result, i) {
         var results = document.getElementById('results');
