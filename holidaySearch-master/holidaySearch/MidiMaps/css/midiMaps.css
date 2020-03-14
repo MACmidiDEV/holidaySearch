@@ -35,12 +35,27 @@
     color: chartreuse;
 }
 
+.resFix {
+    height: 150px;
+}
+
 /* // Extra small devices (portrait phones, less than 576px) */
 /* // No media query for `xs` since this is the default in Bootstrap */
 @media (min-width: 374px) {
+
+    #locationField {
+        /* display: none; */
+        margin-top: 2px;
+    }
+
     #results {
-        height: 10px;
-        font-size: 8px;
+        height: 100%;
+        font-size: 20px;
+        /* padding-bottom: 100px; */
+        /* margin-bottom:100px ; */
+        
+        /* overflow: hidden; */
+        /* display: none; */
     }
 
     select {
@@ -48,28 +63,36 @@
     }
 
     #country {
-        height: 12px;
-        font-size: 14px;
-        margin-top: -100px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.164);
+        font-size: 18px;
+        border: 3px solid rgba(255, 255, 255, 0.164);
+        border-radius: .5em;
+        float: right;
+        margin-right: -10px;
     }
 
     #listing {
-        height: 745px;
-        top: 42px;
+        height: 50%;
+        /* top: 42px; */
     }
 
     #controls {
-        height: 0%;
-        margin-top: -280px;
+        /* height: 0%; */
+        /* margin-top: -280px; */
     }
 
     #autocomplete {
-        color: black;
-        /* margin-top: -100px; */
-        margin-left: 5px;
-        font-size: 20px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.164);
+        margin-top: 00px;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.199);
+        font-size: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.164);
+        border-radius: .5em;
+        /* display: none; */
+        /* width: 100%; */
+        /* background-color: rgba(255, 255, 255, 0.199); */
     }
 
     #locationField {
@@ -79,7 +102,7 @@
 }
 
 
-@media (max-width: 575px) {
+@mediaX (max-width: 575px) {
     .sidebar .sidebar-brand {
         height: 2em;
     }
@@ -101,7 +124,7 @@
     }
 
     #locationField {
-        margin-top: 300px;
+        /* margin-top: 300px; */
     }
 
     #listing {
@@ -141,7 +164,7 @@
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@mediaX (min-width: 576px) {
 
     .sidebar,
     .sidebar-brand {
@@ -153,7 +176,7 @@
     }
 
     #locationField {
-        margin-top: 220px;
+        /* margin-top: 220px; */
     }
 
     #listing {
@@ -195,7 +218,7 @@
 
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@mediaX (min-width: 768px) {
 
     .sidebar,
     .sidebar-brand {
@@ -207,7 +230,7 @@
     }
 
     #locationField {
-        margin-top: 130px;
+        /* margin-top: 130px; */
     }
 
     #listing {
@@ -249,30 +272,30 @@
 
 /* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ <- iphoneMediaquery{source} */
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+@mediaX only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
     #locationField {
-        margin-top: 295px;        
+        /* margin-top: 295px;         */
     }
     #listing {
-        top: 350px;
+        /* top: 350px; */
     }
 }
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@mediaX (min-width: 992px) {
     #results {
         font-size: 20px;
     }
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@mediaX (min-width: 1200px) {
     #results {
         font-size: 28px;
     }
 }
 
-@media (min-width: 4800px) {
+@mediaX (min-width: 4800px) {
     #results {
         font-size: 112px;
     }

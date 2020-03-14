@@ -67,26 +67,13 @@ html, body {
   }
 
   .hotel-search {
-      /* bottom: 50%; */
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
       background: transparent;
-      /* background: rgb(174, 92, 92); 
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      left: 0;
-      /* margin-left: 28%; */
-      /* margin-right: 30%; */
-      /* top: 5; */
       width: 40%; 
+      height: 50%;
       position: absolute;
-      /* margin-top: 15px; */
-      /* position: relative; */
-      /* z-index: 1; */
-      /* background-image: url("/bg1v.jpg"); */
-      /* background-color: aqua; */
       color: rgb(255, 255, 255);
   }
   
@@ -125,10 +112,10 @@ html, body {
     flex: 1 1 140px;
   }
   #autocomplete {
-    width: 100%;
-    color: rgb(255, 255, 255);
+    /* width: 100%;
+    color: rgba(255, 255, 255, 0.322);
     font-size: 14px;
-    background-color: rgba(170, 153, 211, 0.233);
+    background-color: rgba(170, 153, 211, 0.233); */
   }
   /* XXX */
   #country {
