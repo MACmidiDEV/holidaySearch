@@ -15,6 +15,7 @@
 
 #midiNav {
     background-image: url("../img/bg1.jpg");
+    background-image: url("../img/bgMap.png");
     background-position: center center;
     background-size: cover;
 }
@@ -100,7 +101,7 @@ tr>td:hover {
 
     #listing { 
         height: 24%;
-        top: 134px;
+        top: 135px;
     }
 
     #controls {
