@@ -77,8 +77,8 @@
     }
 
     #listing {
-        height: 50%;
-        /* top: 42px; */
+        height: 20%;
+        top: 130px;
     }
 
     #controls {
@@ -112,8 +112,8 @@
     }
 
     #results {
-        height: 200px;
-        font-size: 16px;
+        /* height: 200px; */
+        /* font-size: 16px; */
     }
 
     select {
@@ -132,8 +132,8 @@
     }
 
     #listing {
-        height: 300px;
-        top: 42px;
+        /* height: 300px; */
+        top: 130px;
     }
 
     .placeIcon {
@@ -310,7 +310,7 @@
     }
 
     #sidebar-brand-country {
-        margin-top: 8%;
+        /* margin-top: 8%; */
         font-size: 20em;
     }
 
@@ -413,7 +413,6 @@
 
     #listing {
         height: 30%;
-        top: 150px;
     }
 
     #controls {

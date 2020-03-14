@@ -125,7 +125,7 @@ html, body {
   #country {
     color: rgba(0, 0, 0, 0.763);
     margin-top: 3px;
-    margin-bottom: 13px;
+    /* margin-bottom: 13px; */
     width: 50%;
     border: none;
     font-size: 25px;
@@ -190,13 +190,13 @@ html, body {
 
 
   #sidebar-brand-country {
-    background-color: rgba(9, 238, 39, 0.377);
+    background-color: rgba(9, 238, 39, 0.13);
     padding: 20px;
   }
 
 
   #accordionSidebar {
-    clear: both;
+    /* clear: both; */
     width: 100%;
     
   }
