@@ -380,6 +380,20 @@
         /* overflow: hidden; */
         /* display: none; */
     }
+    #resultsTable {
+        margin-left: 1%;
+        /* left: 100%; */
+        /* border-collapse: collapse; */
+        /* background-color: rgba(170, 153, 211, 0.763); */
+        /* opacity: 0.8; */
+        color: white;
+        /* opacity: 0.8; */
+        /* width: 240px; */
+        /* margin-left: 80%; */
+        width: 100%;
+        /* height: 10%; */
+        font-size: 12px;
+    }
 
     select {
         font-size: small;

@@ -75,19 +75,20 @@ html, body {
       height: 50%;
       position: absolute;
       color: rgb(255, 255, 255);
+      /* display: none; */
   }
   
   #listing {
     position: absolute;
     width: 39.5%;
-    /* height: 27.5%; */
+    height: 27.5%;
     overflow: auto;
         overflow-x: auto;
     /* left: 442px; */
     /* left: 20px; */
     /* bottom: 0%; */
     /* margin-top: 2%; */
-    /* top: 167.5px; */
+    top: 167.5px;
     cursor: pointer;
     overflow-x: visible;
     border: 4px solid rgba(0, 0, 0, 0.473);
@@ -141,13 +142,20 @@ html, body {
 
   #results{
     font-size: 24px;
+    border: 13px solid rgba(255, 255, 255, 0.164);
+    border-radius: 30%;
+  }
+  #results tr > td {
+    border: 13px solid rgba(255, 255, 255, 0.164);
+    border-radius: 30%;
   }
   #resultsTable {
-    margin-left: 1%;
-    padding-left: 10%;
+    /* margin-left: 3%; */
+    /* padding-left: 2%; */
     /* left: 100%; */
-    /* border-collapse: collapse; */
-    background-color: rgba(255, 255, 255, 0.205);
+    border: 13px solid rgba(255, 255, 255, 0.164);
+    background-color: rgba(190, 13, 13, 0.205);
+
     /* opacity: 0.8; */
     color:white;
     /* opacity: 0.8; */
