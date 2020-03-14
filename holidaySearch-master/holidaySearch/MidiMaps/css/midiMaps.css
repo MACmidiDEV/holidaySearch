@@ -48,8 +48,10 @@
 
     #locationField {
         /* display: none; */
+
         box-shadow: 10px 10px 10px #70b47e93;
         margin-top: 2px;
+        
     }
 
     #results {
