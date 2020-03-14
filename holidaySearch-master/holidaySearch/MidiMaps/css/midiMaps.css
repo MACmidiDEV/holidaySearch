@@ -66,9 +66,10 @@
     }
 
     #country {
+        height: 24px;
         color: rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0.164);
-        font-size: 18px;
+        font-size: 14px;
         border: 3px solid rgba(255, 255, 255, 0.164);
         border-radius: .5em;
         float: right;
@@ -88,9 +89,9 @@
     #autocomplete {
         color: rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0.164);
-        margin-top: 15px;
+        /* margin-top: 15px; */
         width: 100%;
-        font-size: 20px;
+        font-size: 12px;
         border: 3px solid rgba(255, 255, 255, 0.164);
         border-radius: .5em;
         /* display: none; */
@@ -331,7 +332,7 @@
     }
 
     #resultsTable {
-        margin-left: 1%;
+        /* margin-left: 1%; */
         /* left: 100%; */
         /* border-collapse: collapse; */
         background-color: rgba(170, 153, 211, 0.763);
@@ -381,7 +382,7 @@
         /* display: none; */
     }
     #resultsTable {
-        margin-left: 1%;
+        /* margin-left: 1%; */
         /* left: 100%; */
         /* border-collapse: collapse; */
         /* background-color: rgba(170, 153, 211, 0.763); */
