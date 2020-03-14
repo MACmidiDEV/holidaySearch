@@ -38,6 +38,20 @@
 .resFix {
     height: 150px;
 }
+tr>td:hover {
+    
+    background-color: #8b8c8659;
+}
+
+/* .placeIcon {
+    float: right;
+    width: inherit;
+}
+*/
+.placeIcon:hover {
+    float: left;
+    background-color: none;
+}
 
 
 

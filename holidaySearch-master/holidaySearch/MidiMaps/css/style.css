@@ -148,7 +148,7 @@ html, body {
     border-radius: 30%;
   }
   #results tr > td {
-    border: 13px solid rgba(0, 0, 0, 0.164);
+    border: 13px solid rgba(164, 159, 80, 0.17);
     border-radius: 30%;
   }
   #resultsTable {
